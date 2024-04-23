@@ -35,7 +35,7 @@ export function indecisivePlanner() {
 
     // Oh no! Not the Clout assignment, the Cloud assignment!
     const wrongId = request.id;
-    request = http.del("${url}/${wrongId}");
+    request = http.del(`${url}/${wrongId}`);
     check(request, {
         'is status 200': (r) => r.status === 200,
     });
